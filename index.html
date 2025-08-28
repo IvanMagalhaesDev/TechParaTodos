@@ -15,27 +15,31 @@
             <img src="IMGs/Logo.png" alt="Logo da Tech para todos, uma comunidade envolvida por tecnologia"
                 style="height: 4rem; width: auto;">
         </div>
-        <nav>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+        <nav id="sidebar">
+            <a id="fechar-menu" class="fechar-menu" aria-label="Fechar menu">✖</a>
             <ul>
-                <li><a href="#hero">Inicial</a></li>
+                <li>
+                    <button id="theme-toggle" class="mode-toggle" aria-pressed="false" title="Alternar tema">🌙</button>
+                </li>
+                <li><a href="#hero">Início</a></li>
                 <li><a href="#courses">Cursos</a></li>
                 <li><a href="#testimonials">Depoimentos</a></li>
                 <li><a href="#contact">Contatos</a></li>
-                <li>
-                    <button id="theme-toggle" class="mode-toggle" aria-pressed="false" aria-label="Ativar modo escuro"
-                        title="Alternar tema (claro / escuro)">🌙</button>
-                </li>
             </ul>
         </nav>
+
     </header>
 
-    <section id="hero">
-        <h1>Tech Para Todos</h1>
-        <p>A missão da nossa ONG é democratizar o acesso à educação em tecnologia. Junte-se a nós!</p>
-        <button class="call-to-action">Inscreva-se Agora</button>
-    </section>
-
     <main>
+
+        <section id="hero">
+            <h1>Tech Para Todos</h1>
+            <p>A missão da nossa ONG é democratizar o acesso à educação em tecnologia. Junte-se a nós!</p>
+            <button class="call-to-action">Inscreva-se Agora</button>
+        </section>
+
         <section id="courses">
             <h2>📚 Lista de Cursos</h2>
             <div class="courses-grid">
@@ -94,27 +98,44 @@
             </div>
             <div id="feedback-form">
                 <label for="feedback-input">Deixe seu feedback:</label>
-                <input type="text" id="feedback-input" placeholder="...">
+                <br>
+                <textarea id="feedback-input" rows="15" cols="120" style="width: 100%;" placeholder="..."></textarea>
+                <br>
                 <button id="submit-feedback">Enviar</button>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Contatos e Apoio</h2>
+            <h2>📞 Contatos e Apoio</h2>
             <ul>
                 <li>WhatsApp: <a href="tel:+5588983292463">(88) 98329-2463</a></li>
                 <li>E-mail: <a href="mailto:tech.tudo123@gmail.com">tech.tudo123@gmail.com</a></li>
                 <li>Instagram: <a href="https://www.instagram.com/tech.tudo123">tech.tudo123</a></li>
             </ul>
-            <p>Para possíveis parceiros: Contate-nos através em nossa causa, ou ajude no financiamento para voluntários,
-                ou nos ajude financiando com doações por pix ou do.</p>
+            <p>Caso se interesse em ajudar nossa causa, contate-nos através de um dos meios de comunicação para se
+                voluntariar, ou nos ajude financeiramente com doações por meio do pix:</p>
             <p>PIX: (88) 98329-2463</p>
         </section>
     </main>
 
     <footer>
-        copyright - 2025
+        <div class="footer-content">
+            <p><strong>Tech Para Todos</strong> © 2025</p>
+            <nav class="footer-nav">
+                <a href="#hero">Início</a> |
+                <a href="#courses">Cursos</a> |
+                <a href="#testimonials">Depoimentos</a> |
+                <a href="#contact">Contato</a>
+            </nav>
+            <div class="footer-social">
+                <a href="#">(88) 98329-2463</a> |
+                <a href="#">tech.tudo123@gmail.com</a> |
+                <a href="#">Instagram</a>
+            </div>
+            <p class="footer-quote">"Nossa missão é democratizar o acesso à educação em tecnologia."</p>
+        </div>
     </footer>
+
 
     <script src="script.js"></script>
 </body>

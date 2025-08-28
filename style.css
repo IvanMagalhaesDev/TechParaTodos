@@ -93,14 +93,6 @@ h2 {
     border: 1px solid #ddd;
 }
 
-.course-image {
-    background-color: #d0d0d0;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #808080;
-}
 
 .course-content {
     padding: 10px;

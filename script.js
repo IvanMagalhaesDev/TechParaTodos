@@ -1,29 +1,41 @@
+// Tema
 const botaoTema = document.getElementById('theme-toggle');
 const CHAVE_TEMA = 'techparatodos_tema';
 
-// Mostra o sol quando estiver escuro e a lua quando estiver claro
-function atualizarBotao(isEscuro) {
-  botaoTema.textContent = isEscuro ? '🔆' : '🌙';
-  botaoTema.setAttribute('aria-label', isEscuro ? 'Desativar modo escuro' : 'Ativar modo escuro');
-  botaoTema.setAttribute('title', isEscuro ? 'Voltar para modo claro' : 'Ativar modo escuro');
-  botaoTema.setAttribute('aria-pressed', String(isEscuro));
+function atualizarBotao(escuro) {
+  botaoTema.textContent = escuro ? '🔆' : '🌙';
 }
 
-// Alternar ao clicar no botão
 botaoTema.addEventListener('click', () => {
-  const isEscuro = document.body.classList.toggle('dark-mode');
-  localStorage.setItem(CHAVE_TEMA, isEscuro ? 'escuro' : 'claro');
-  atualizarBotao(isEscuro);
+  const escuro = document.body.classList.toggle('dark-mode');
+  localStorage.setItem(CHAVE_TEMA, escuro ? 'escuro' : 'claro');
+  atualizarBotao(escuro);
 });
 
-// Handle feedback form submission
-document.getElementById('submit-feedback').addEventListener('click', function() {
-    const feedbackInput = document.getElementById('feedback-input');
-    const feedbackText = feedbackInput.value.trim();
-    if (feedbackText) {
-        alert('Feedback enviado: ' + feedbackText);
-        feedbackInput.value = '';
-    } else {
-        alert('Por favor, insira um feedback.');
-    }
+// Feedback
+document.getElementById('submit-feedback').addEventListener('click', () => {
+  const input = document.getElementById('feedback-input');
+  const texto = input.value.trim();
+  if (texto) {
+    alert('Feedback enviado: ' + texto);
+    input.value = '';
+  } else {
+    alert('Por favor, insira um feedback.');
+  }
+});
+
+// Menu
+const botaoMenu = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
+
+botaoMenu.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+  const aberto = sidebar.classList.contains('active');
+});
+
+const botaoFechar = document.getElementById('fechar-menu');
+
+botaoFechar.addEventListener('click', () => {
+  sidebar.classList.remove('active');
+  botaoMenu.setAttribute('aria-label', 'Abrir menu');
 });

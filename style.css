@@ -7,17 +7,13 @@ body {
 }
 
 header {
-    background-color: #a0a0a0;
+    background-color: #126AF6;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
 
 nav ul {
     list-style: none;
@@ -33,7 +29,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
 }
 
 .mode-toggle {
@@ -45,7 +41,7 @@ nav ul li a {
     margin: 0;
 }
 
-.fechar-menu{
+.fechar-menu {
     display: none;
 }
 
@@ -53,6 +49,10 @@ nav ul li a {
     font-size: 24px;
     font-weight: bold;
     order: 2;
+}
+
+#menu-toggle {
+    color: #ffffff;
 }
 
 .menu-toggle {
@@ -76,7 +76,7 @@ nav ul li a {
         left: 0;
         width: 220px;
         height: 100%;
-        background-color: #a0a0a0;
+        background-color: #ffffff;
         transform: translateX(-100%);
         z-index: 1000;
     }
@@ -91,10 +91,15 @@ nav ul li a {
         transform: translateX(0);
     }
 
-    .fechar-menu{
+    .fechar-menu {
         display: block;
         margin-top: 20px;
         margin-left: 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #000000;
     }
 }
 
@@ -189,6 +194,10 @@ h2 {
     cursor: pointer;
 }
 
+#feedback-form button:hover {
+    background-color: #0048B9;
+}
+
 #contact {
     text-align: center;
 }
@@ -270,6 +279,7 @@ body.dark-mode {
 }
 
 body.dark-mode header,
+body.dark-mode #sidebar,
 body.dark-mode #hero,
 body.dark-mode footer {
     background-color: #1e1e1e;

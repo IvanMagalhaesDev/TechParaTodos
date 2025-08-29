@@ -36,6 +36,11 @@ nav ul li a {
     color: #ffffff;
 }
 
+nav ul li button {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .mode-toggle {
     background: none;
     border: none;
@@ -255,27 +260,9 @@ footer .footer-quote {
 }
 
 /* High contrast mode */
+/* Modo Alto Contraste */
 body.high-contrast {
-    background-color: #000;
-    color: #fff;
-}
-
-body.high-contrast a {
-    color: #fff;
-}
-
-body.high-contrast .course-card,
-body.high-contrast .testimonial-card {
-    background-color: #333;
-    border-color: #fff;
-}
-
-body.high-contrast #hero {
-    background-color: #000;
-}
-
-body.high-contrast footer {
-    background-color: #000;
+    filter: contrast(1.5) brightness(1.1);
 }
 
 /* Dark mode */

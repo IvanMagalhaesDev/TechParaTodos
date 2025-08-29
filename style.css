@@ -109,8 +109,10 @@ nav ul li a {
 
 #hero {
     background-image: url(IMGs/Banner.png);
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    padding: 50px 20px;
+    padding: 65px 20px;
     color: #fff;
 }
 

@@ -6,6 +6,10 @@ body {
     color: #000;
 }
 
+#sidebar{
+    order: 3;
+}
+
 header {
     background-color: #126AF6;
     padding: 10px 20px;
@@ -104,7 +108,7 @@ nav ul li a {
 }
 
 #hero {
-    background-color: #808080;
+    background-image: url(IMGs/Banner.png);
     text-align: center;
     padding: 50px 20px;
     color: #fff;

@@ -12,6 +12,20 @@ botaoTema.addEventListener('click', () => {
   atualizarBotao(escuro);
 });
 
+// alto contraste
+document.addEventListener("DOMContentLoaded", () => {
+  const contrastToggle = document.getElementById("contrast-toggle");
+  
+  contrastToggle.addEventListener("click", () => {
+    document.body.classList.toggle("high-contrast");
+
+    const isContrast = document.body.classList.contains("high-contrast");
+    contrastToggle.setAttribute("aria-pressed", isContrast);
+    contrastToggle.textContent = isContrast ? "🔲" : "🔳";
+  });
+});
+
+
 // Feedback
 document.getElementById('submit-feedback').addEventListener('click', () => {
   const input = document.getElementById('feedback-input');

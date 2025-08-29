@@ -6,6 +6,10 @@ body {
     color: #000;
 }
 
+#sidebar{
+    order: 3;
+}
+
 header {
     background-color: #126AF6;
     padding: 10px 20px;
